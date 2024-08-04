@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "ScaleSend",
+  "version": "1.0",
+  "description": "Envía mensajes a una lista de contactos usando Whatsapp Web",
+  "permissions": [
+    "activeTab",
+    "https://web.whatsapp.com/*",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enviar mensajes de WhatsApp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 300px;
+      padding: 20px;
+    }
+    h1 {
+      color: #075e54;
+    }
+    textarea, input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    button {
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #128c7e;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enviar mensajes de WhatsApp</h1>
+  <textarea id="numbers" rows="4" placeholder="Ingresa los números (uno por línea)"></textarea>
+  <textarea id="message" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+  <input type="file" id="imageInput" accept="image/*">
+  <button id="sendButton">Enviar mensajes</button>
+  <script src="popup.js"></script>
+</body>
+</html>
